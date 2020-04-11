@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Web Page</title>
+    <link rel="stylesheet" href="~/style.css"/>
+</head>
+
+<body>
+    <div class="navbar">
+        <span>Home</span> | 
+        <span><a href="/projects">Projects </a></span> | 
+        <span><a href="/contact">Contact</a></span>
+    </div>
+    <h1 class="title">About Me</h1>
+    <img id="portrait" src="~/founder.jpg" alt="founder">
+    <h3>Michael Choi</h3>
+    @{
+        var profileBlock = "I love coding. I'm the founder of all code on the internet. All code belongs to my big brain.";
+        <p>@profileBlock</p>
+    }
+
+    @* <h1>Here are some delicious foods!</h1>
+    @{
+        var FoodList = new List<String>
+        {
+            "Apple Pie",
+            "Burritos",
+            "Clams Casino",
+            "Donuts"
+        };
+
+        foreach (string food in FoodList)
+        {
+            if (food.ToUpper()[0] == 'C')
+            {
+                <p class="redText">@food</p>
+            }
+            else
+            {
+                <p>@food</p>
+            }
+        }
+    }
+    <h1>@ViewBag.message test</h1> *@
+</body>
+</html>
